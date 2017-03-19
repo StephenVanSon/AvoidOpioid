@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import PopUpDialog from './components/PopUpDialog'
 import Map from './components/Map';
+import Navigation from './components/Navigation';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Nopioid</h2>
         </div>
+          <Navigation></Navigation>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
