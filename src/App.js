@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PopUpDialog from './components/PopUpDialog'
-import Map from './components/Map';
+import PopUpDialog from './components/PopUpDialog';
+import SurveyView from './components/survey';
 
 class App extends Component {
   render() {
@@ -16,9 +16,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <PopUpDialog/>
-          <div>
-              <Map></Map>
-          </div>
+        <SurveyView/>
       </div>
     );
   }
