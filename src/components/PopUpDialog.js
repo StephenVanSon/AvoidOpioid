@@ -39,7 +39,9 @@ const PopUpDialog = React.createClass({
             </LinkContainer>
         </OverlayTrigger>
         <OverlayTrigger plancement="bottom" overlay={popoverLearn} bsStyle="info">
+          <LinkContainer to="/learnMore">
           <Button bsStyle="info" bsSize="large" href="#" block onClick={() => this.setState({show: false})}>Learn More</Button>
+          </LinkContainer>
         </OverlayTrigger>
       </Modal.Body>
       <Modal.Footer>

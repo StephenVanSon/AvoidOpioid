@@ -5,6 +5,7 @@ import {Router, Route, hashHistory} from 'react-router';
 import App from './App';
 import React from 'react';
 import Map from './components/Map';
+import LearnMore from './components/LearnMore';
 
 
 class MainRouter extends React.Component
@@ -15,6 +16,7 @@ class MainRouter extends React.Component
             <Router history={hashHistory}>
                 <Route path="/" component={App}>
                     <Route path="/map" component={Map}/>
+                    <Route path="/LearnMore" component={LearnMore}/>
                 </Route>
             </Router>
         )
