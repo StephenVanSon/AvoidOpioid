@@ -4,6 +4,7 @@
 
 import React, {Component} from 'react';
 import {Navbar, NavItem, Nav} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 
 
 class Navigation extends Component{
@@ -18,7 +19,9 @@ class Navigation extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="/find">Find a Kit</NavItem>
+                        <LinkContainer to="/map">
+                            <NavItem eventKey={1}>Find a Kit</NavItem>
+                        </LinkContainer>
                         <NavItem eventKey={2} href="/report">Report an Incident</NavItem>
                     </Nav>
                 </Navbar.Collapse>
