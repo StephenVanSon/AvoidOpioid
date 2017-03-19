@@ -2,8 +2,8 @@
  * Created by Ali on 2017-03-18.
  */
 
-import React, { Component } from 'react';
-import {Button, Navbar, NavItem, Nav, NavDropdown, MenuItem,} from 'react-bootstrap';
+import React, {Component} from 'react';
+import {Navbar, NavItem, Nav} from 'react-bootstrap';
 
 
 class Navigation extends Component{
