@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Modal, OverlayTrigger,Popover} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 
 const PopUpDialog = React.createClass({
   getInitialState(){
@@ -29,12 +30,15 @@ const PopUpDialog = React.createClass({
       <Modal show={this.state.show} onHide={close} container={this} bsSize="large" aria-labelledby="contained-modal-title-lg">
       <Modal.Body>
         <OverlayTrigger placement="bottom" overlay={popoverReport}>
+
           <Button bsStyle="danger" bsSize="large" href="/report" block>Report an Incident</Button>
         </OverlayTrigger>
         <OverlayTrigger placement="bottom" overlay={popoverFind} bsStyle="danger">
-          <Button bsStyle="danger" bsSize="large" href="/find" block>Find a Naloxone Kit</Button>
+            <LinkContainer to="/map">
+                <Button bsStyle="danger" bsSize="large" href="/find" block>Find a Naloxone Kit</Button>
+            </LinkContainer>
         </OverlayTrigger>
-        <OverlayTrigger placement="bottom" overlay={popoverLearn} bsStyle="info">
+        <OverlayTrigger plancement="bottom" overlay={popoverLearn} bsStyle="info">
           <Button bsStyle="info" bsSize="large" href="#" block onClick={() => this.setState({show: false})}>Learn More</Button>
         </OverlayTrigger>
       </Modal.Body>
