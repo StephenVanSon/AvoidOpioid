@@ -1,22 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React  from 'react';
 import './App.css';
 import PopUpDialog from './components/PopUpDialog';
-import SurveyView from './components/survey';
+import Navigation from './components/Navigation';
+import LearnMore from './components/LearnMore';
 
-class App extends Component {
+class App extends React.Component {
   render() {
+    let ComponentsToRender = [];
+    if(this.props.children){
+        ComponentsToRender.push(this.props.children);
+    }
+    else{
+        ComponentsToRender.push(<PopUpDialog/>);
+    }
+
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Nopioid</h2>
         </div>
+          <Navigation></Navigation>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <PopUpDialog/>
-        <SurveyView/>
+          {ComponentsToRender}
       </div>
     );
   }
