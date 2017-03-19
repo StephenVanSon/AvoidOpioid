@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PopUpDialog from './components/PopUpDialog'
-import Map from './components/Map';
+import {geolocated} from './components/Map';
+import {Map} from './components/Map';
 
 class App extends Component {
   render() {
@@ -27,10 +28,10 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <PopUpDialog/>
           <div>
-              <Map location = {userLocation}></Map>
+              <geolocated></geolocated>
           </div>
+        <PopUpDialog/>
       </div>
     );
   }

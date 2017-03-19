@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
+import {geolocated} from 'react-geolocated';
 
 const coords = {
     lat: 51.5258541,
@@ -33,7 +34,11 @@ const Map = React.createClass({
     },
 
     render() {
-        let userLocation = this.props.location;
+        // if(this.props.isGeolocationAvailable && this.props.isGeolocationEnabled){
+        //     coords.lat = this.props.coords.latitude;
+        //     coords.lng = this.props.coords.longitude;
+        // }
+
         return (
             <Gmaps
                 width={'800px'}
@@ -65,4 +70,11 @@ const Map = React.createClass({
 
 });
 
-export default Map;
+//export default Map;
+
+export default geolocated({
+    positionOptions: {
+        enableHighAccuracy: false,
+    },
+    userDecisionTimeout: 5000
+})(Map);
