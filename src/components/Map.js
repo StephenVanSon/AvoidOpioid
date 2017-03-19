@@ -11,6 +11,7 @@ const coords = {
 
 const params = {v: '3.exp', key: 'AIzaSyA-iAz-lZ5xOZf4jYL94bgHqoLGZjPVHDE'};
 
+
 const Map = React.createClass({
 
     onMapCreated(map) {
@@ -32,6 +33,7 @@ const Map = React.createClass({
     },
 
     render() {
+        let userLocation = this.props.location;
         return (
             <Gmaps
                 width={'800px'}

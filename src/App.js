@@ -6,6 +6,18 @@ import Map from './components/Map';
 
 class App extends Component {
   render() {
+      let navigator = window.navigator;
+      let userLocation = null;
+      if ("geolocation" in navigator) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+              userLocation = { lat: position.coords.latitude, lon: position.coords.longitude };
+          });
+      } else {
+          /* geolocation IS NOT available */
+          userLocation = {lat:49.2827, lon: 123.1207};
+      }
+
+
     return (
       <div className="App">
         <div className="App-header">
@@ -17,7 +29,7 @@ class App extends Component {
         </p>
         <PopUpDialog/>
           <div>
-              <Map></Map>
+              <Map location = {userLocation}></Map>
           </div>
       </div>
     );
