@@ -4,10 +4,10 @@ import React from 'react';
 Survey.cssType = "bootstrap";
 
 
-var survey = new SurveyModel({ questions: [
-    { type: "checkbox", name: "yes/no", title: "In relation to their skin are they:", isRequired: true,
-     colCount: 2, choices: ["Warm", "Hot", "Cold", "Sweaty", "Pale", "Seems Normal"] }
-]});
+// var survey = new SurveyModel({ questions: [
+//     { type: "checkbox", name: "yes/no", title: "In relation to their skin are they:", isRequired: true,
+//      colCount: 2, choices: ["Warm", "Hot", "Cold", "Sweaty", "Pale", "Seems Normal"] }
+//]});
 // var survey = new SurveyModel({ questions: [
 //     { type: "checkbox", name: "yes/no", title: "Their pulse rate:", isRequired: true,
 //      colCount: 2, choices: ["Increased", "Decreased", "There is None", "Doesn't seem to be affected"] }
