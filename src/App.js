@@ -2,6 +2,7 @@ import React  from 'react';
 import './App.css';
 import PopUpDialog from './components/PopUpDialog';
 import Navigation from './components/Navigation';
+import LearnMore from './components/LearnMore';
 
 class App extends React.Component {
   render() {
