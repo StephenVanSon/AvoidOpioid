@@ -1,26 +1,28 @@
-import {Survey} from 'survey-react';
+import {Survey, SurveyModel} from 'survey-react';
+import React from 'react';
 
-Survey.defaultBootstrapCss.navigationButton = "btn btn-primary";
-Survey.Survey.cssType = "bootstrap";
-var survey = new Survey.Model({ questions: [
+Survey.cssType = "bootstrap";
+
+
+var survey = new SurveyModel({ questions: [
     { type: "checkbox", name: "yes/no", title: "In relation to their skin are they:", isRequired: true,
      colCount: 2, choices: ["Warm", "Hot", "Cold", "Sweaty", "Pale", "Seems Normal"] }
 ]});
-var survey = new Survey.Model({ questions: [
+var survey = new SurveyModel({ questions: [
     { type: "checkbox", name: "yes/no", title: "Their pulse rate:", isRequired: true,
      colCount: 2, choices: ["Increased", "Decreased", "There is None", "Doesn't seem to be affected"] }
 
 ]});
-var survey = new Survey.Model({ questions: [
+var survey = new SurveyModel({ questions: [
     { type: "checkbox", name: "yes/no", title: "In relation to consciousness are they:", isRequired: true,
      colCount: 2, choices: ["Drowsy", "Confused", "Having a seizure", "Not conscious", "Not affected"] }
 ]});
-var survey = new Survey.Model({ questions: [
+var survey = new SurveyModel({ questions: [
     { type: "checkbox", name: "yes/no", title: "Does their breathing seem:", isRequired: true,
      colCount: 2, choices: ["Rapid", "Slow", "Deep", "Shallow", "Not affected"] }
 
 ]});
-var survey = new Survey.Model({ questions: [
+var survey = new SurveyModel({ questions: [
     { type: "checkbox", name: "yes/no", title: "Do they show signs of:", isRequired: true,
      colCount: 2, choices: ["Nausea", "Vomitting", "Diahrrea", "None of these apply",] }
 ]});
@@ -28,7 +30,7 @@ var survey = new Survey.Model({ questions: [
 const SurveyView = React.createClass({
   render(){
     return(
-      <Survey.Survey model = {survey}/>
+      <Survey model = {survey}/>
     )
   }
 
