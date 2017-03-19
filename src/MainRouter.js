@@ -6,6 +6,7 @@ import App from './App';
 import React from 'react';
 import Map from './components/Map';
 import LearnMore from './components/LearnMore';
+import SurveyView from './components/survey';
 
 
 class MainRouter extends React.Component
@@ -17,6 +18,7 @@ class MainRouter extends React.Component
                 <Route path="/" component={App}>
                     <Route path="/map" component={Map}/>
                     <Route path="/LearnMore" component={LearnMore}/>
+                    <Route path="/survey" component={SurveyView}/>
                 </Route>
             </Router>
         )

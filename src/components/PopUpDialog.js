@@ -30,8 +30,9 @@ const PopUpDialog = React.createClass({
       <Modal show={this.state.show} onHide={close} container={this} bsSize="large" aria-labelledby="contained-modal-title-lg">
       <Modal.Body>
         <OverlayTrigger placement="bottom" overlay={popoverReport}>
-
-          <Button bsStyle="danger" bsSize="large" href="/report" block>Report an Incident</Button>
+          <LinkContainer to="/survey">
+            <Button bsStyle="danger" bsSize="large" href="/report" block>Report an Incident</Button>
+          </LinkContainer>
         </OverlayTrigger>
         <OverlayTrigger placement="bottom" overlay={popoverFind} bsStyle="danger">
             <LinkContainer to="/map">

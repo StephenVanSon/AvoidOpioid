@@ -22,7 +22,9 @@ class Navigation extends Component{
                         <LinkContainer to="/map">
                             <NavItem eventKey={1}>Find a Kit</NavItem>
                         </LinkContainer>
-                        <NavItem eventKey={2} href="/report">Report an Incident</NavItem>
+                        <LinkContainer to="/survey">
+                            <NavItem eventKey={2}>Report an Incident</NavItem>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
