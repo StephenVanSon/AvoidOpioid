@@ -4,6 +4,7 @@ import './App.css';
 import PopUpDialog from './components/PopUpDialog'
 import Map from './components/Map';
 import Navigation from './components/Navigation';
+import learnMore from './components/learnMore';
 
 class App extends Component {
   render() {
@@ -15,11 +16,10 @@ class App extends Component {
         </div>
           <Navigation></Navigation>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <PopUpDialog/>
-          <div>
-              <Map></Map>
+        <div>
+          <learnMore/>
           </div>
       </div>
     );

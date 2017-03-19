@@ -28,7 +28,7 @@ const PopUpDialog = React.createClass({
     //todo: link buttons on click
     const wellStyles = {maxWidth: 400, margin: '0 auto 10px'};
     return (
-          <Modal show = {this.state.show} onHide={close} container={this} tr bsSize="large" aria-labelledby="contained-modal-title-lg">
+          <Modal show = {this.state.show} onHide={close} container={this} bsSize="large" aria-labelledby="contained-modal-title-lg">
             <Modal.Body>
             <OverlayTrigger placement="bottom" overlay={popoverReport}>
               <Button bsStyle="danger" bsSize="large" href="/report" block>Report an Incident</Button>

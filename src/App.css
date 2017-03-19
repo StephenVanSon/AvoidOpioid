@@ -11,7 +11,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-    padding-bottom: 15%;
+  padding-bottom: 15%;
   color: white;
 }
 
@@ -23,14 +23,10 @@
    position: relative;
  }
 
-.modal-container .modal, .modal-container .modal-backdrop{
+.modal-container, .modal-container, .modal-backdrop{
    position: absolute;
 }
 
 .modal-footer {
   text-align: center;
-}
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
