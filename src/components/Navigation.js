@@ -13,7 +13,9 @@ class Navigation extends Component{
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
+                    <LinkContainer to='/LearnMore'>
                         <a href="#">Home</a>
+                      </LinkContainer>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
